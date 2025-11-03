@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abunu Mezgebu - Developer Portfolio</title>
+    <link rel="stylesheet" href="CSS/my_portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="container">
+            <h1 class="logo">Abunu Mezgebu</h1>
+            <nav id="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#connect">Connect</a>
+            </nav>
+            <div class="header-controls">
+                <button class="mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-sun" id="mode-icon"></i>
+                </button>
+                <button class="hamburger" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Hi, I'm <span class="highlight">Abunu Mezgebu</span></h2>
+                <h3>A Front-End Developer proficient in HTML, CSS, JavaScript, and React.</h3>
+                <p>I design and build modern, responsive, and interactive web experiences.</p>
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+            </div>
+            <div class="hero-image">
+                <img src="image/my_portfolio.jpg" alt="Abunu Mezgebu Profile Picture">
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML5 & CSS3</div>
+                <div class="skill-item">Bootstrap</div>
+                <div class="skill-item">JavaScript (ES6+)</div>
+                <div class="skill-item">React & Hooks</div>
+                <div class="skill-item">Node js</div>
+                <div class="skill-item">Git/GitHub</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div id="projects-container" class="projects-grid"></div>
+        </div>
+    </section>
+
+    <section id="connect" class="section connect-section">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p>Follow or contact me through these platforms:</p>
+            <div id="social-links" class="social-links"></div>
+        </div>
+        <br>
+        <br>
+        <h3>email: abunuwudu@gmail.com</h1>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Abunu Mezgebu. Built with ❤️ using HTML, CSS, and JS.</p>
+        </div>
+    </footer>
+
+    <script src="JavaScript/my_portfolio.js"></script>
+</body>
+</html>
