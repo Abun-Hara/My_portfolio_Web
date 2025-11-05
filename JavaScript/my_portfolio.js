@@ -111,7 +111,7 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => na
 
 const socialLinks = [
     { name: 'Twitter', url: 'https://twitter.com/@Abunu_Mezgebu', icon: 'fa-brands fa-x-twitter' },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/Abunu Mezgebu', icon: 'fa-brands fa-linkedin' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/abunu-mezgebu-31923036a/', icon: 'fa-brands fa-linkedin' },
     { name: 'Instagram', url: 'https://instagram.com/abune_hara', icon: 'fa-brands fa-instagram' },
     { name: 'Telegram', url: 'https://t.me/hara2127', icon: 'fa-brands fa-telegram' },
     { name: 'Email', url: 'mailto:abunuwudu@gmail.com', icon: 'fa-solid fa-envelope' }
@@ -121,7 +121,17 @@ const socialContainer = document.getElementById('social-links');
 socialLinks.forEach(s => {
     const a = document.createElement('a');
     a.href = s.url;
-    a.target = '_blank';
+    const isMailto = typeof s.url === 'string' && s.url.startsWith('mailto:');
+    if (!isMailto) {
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+    } else {
+        
+        a.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = s.url;
+        });
+    }
     a.classList.add('social-link');
     a.innerHTML = `<i class="${s.icon}"></i><span>${s.name}</span>`;
     socialContainer.appendChild(a);
